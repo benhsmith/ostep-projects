@@ -1,1 +1,2 @@
-cd $XV6_PATH; ../../tester/run-xv6-command.exp CPUS=2 Makefile.test test_2 | grep XV6_TEST_OUTPUT; cd ..
+TEST_PATH=$(pwd)
+cd $XV6_PATH; $TEST_PATH/../tester/run-xv6-command.exp CPUS=2 Makefile.test test_2 | grep XV6_TEST_OUTPUT; cd $TEST_PATH

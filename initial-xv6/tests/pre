@@ -1,5 +1,4 @@
-echo $XV6_PATH
-
+TEST_PATH=$(pwd)
 ../tester/xv6-edit-makefile.sh $XV6_PATH/Makefile test_1,test_2 > $XV6_PATH/Makefile.test
 cp -f tests/test_1.c $XV6_PATH/test_1.c
 cp -f tests/test_2.c $XV6_PATH/test_2.c
@@ -7,4 +6,4 @@ cd $XV6_PATH
 make -f Makefile.test clean
 make -f Makefile.test xv6.img
 make -f Makefile.test fs.img
-cd ..
+cd $TEST_PATH
